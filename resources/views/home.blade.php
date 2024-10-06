@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.master')
+
+@section('title')
+    Dashboard
+@endsection
 
 @section('content')
     <div class="container p-4">
@@ -20,4 +24,13 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('js')
+    <script>
+        $(document).ready(function() {
+            $("#sidebar li a").removeClass("active");
+            $("#dashboard").addClass("active");
+        });
+    </script>
 @endsection
