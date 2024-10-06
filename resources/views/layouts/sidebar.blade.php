@@ -31,14 +31,37 @@
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
                             <a href="{{ route('themes') }}" class="nav-link" id="themes-index">
-                                <i class="fas fa-angle-double-right nav-icon ml-3"></i>
+                                <i class="fas fa-angle-double-right nav-icon"></i>
                                 <p>Theme List</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('themes.create') }}" class="nav-link" id="themes-create">
-                                <i class="fas fa-angle-double-right nav-icon ml-3"></i>
+                                <i class="fas fa-angle-double-right nav-icon"></i>
                                 <p>Create Theme</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" id="product">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-box"></i>
+                        <p>
+                            Products
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('products') }}" class="nav-link" id="product-index">
+                                <i class="fas fa-angle-double-right nav-icon"></i>
+                                <p>Product List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('products.create') }}" class="nav-link" id="product-create">
+                                <i class="fas fa-angle-double-right nav-icon"></i>
+                                <p>Create Product</p>
                             </a>
                         </li>
                     </ul>

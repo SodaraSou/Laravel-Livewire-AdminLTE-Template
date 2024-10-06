@@ -27,7 +27,9 @@
         {{-- Content Wrapper --}}
         <div class="content-wrapper">
             {{-- @yield('content') --}}
-            {{ $slot }}
+            <div class="p-4">
+                {{ $slot }}
+            </div>
         </div>
         {{-- Footer --}}
         @include('layouts.footer')
