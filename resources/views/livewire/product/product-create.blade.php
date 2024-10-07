@@ -3,7 +3,7 @@
         <div class="card-header">
             <h3 class="card-title">Create Product</h3>
         </div>
-        <form wire:submit='create'>
+        <form wire:submit='save'>
             <div class="card-body row">
                 <div class="form-group col-12 col-md-6">
                     <label>Name</label>

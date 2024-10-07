@@ -35,6 +35,11 @@ class Index extends Component
         $this->resetPage();
     }
 
+    public function delete(Theme $theme)
+    {
+        $theme->delete();
+    }
+
     public function render()
     {
         return view('livewire.theme.index', [

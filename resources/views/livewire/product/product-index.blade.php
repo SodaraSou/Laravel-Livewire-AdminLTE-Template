@@ -63,7 +63,11 @@
                         <td>{{ $product->created_at }}</td>
                         <td>{{ $product->updated_at }}</td>
                         <td>
-                            <a href="{{ route('products.edit', $product->id) }}" class="btn btn-primary">Edit</a>
+                            <div class="d-flex">
+                                <a href="{{ route('products.edit', $product->id) }}"
+                                    class="btn btn-primary mr-2">Edit</a>
+                                <x-alert-modal :id='$product->id'></x-alert-modal>
+                            </div>
                         </td>
                     </tr>
                 @endforeach

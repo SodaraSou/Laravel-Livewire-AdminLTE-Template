@@ -35,6 +35,11 @@ class ProductIndex extends Component
         $this->resetPage();
     }
 
+    public function delete(LegoSet $legoSet)
+    {
+        $legoSet->delete();
+    }
+
     public function render()
     {
         return view('livewire.product.product-index', [

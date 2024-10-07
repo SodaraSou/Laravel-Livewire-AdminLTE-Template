@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="card-body">
-        <table id="example2" class="table table-bordered table-hover">
+        <table id="example2" class="table table-hover text-nowrap">
             <thead>
                 <tr>
                     <th>
@@ -45,7 +45,10 @@
                         <td>{{ $theme->created_at }}</td>
                         <td>{{ $theme->updated_at }}</td>
                         <td>
-                            <a href="{{ route('themes.edit', $theme->id) }}" class="btn btn-primary">Edit</a>
+                            <div class="d-flex">
+                                <a href="{{ route('themes.edit', $theme->id) }}" class="btn btn-primary mr-2">Edit</a>
+                                <x-alert-modal :id='$theme->id'></x-alert-modal>
+                            </div>
                         </td>
                     </tr>
                 @endforeach
