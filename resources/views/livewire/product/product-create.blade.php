@@ -1,3 +1,7 @@
+@section('title')
+    Create Product
+@endsection
+
 <div class="container p-0">
     <div class="card card-primary">
         <div class="card-header">

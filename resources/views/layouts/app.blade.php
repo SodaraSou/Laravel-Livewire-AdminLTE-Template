@@ -14,11 +14,13 @@
     <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/adminlte.min.css') }}">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="{{ asset('vendor/sweetalert2/sweetalert2.min.css') }}">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/custom.css') }}">
 </head>
 
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         {{-- Navbar --}}
         @include('layouts.navbar')
@@ -26,7 +28,6 @@
         @include('layouts.sidebar')
         {{-- Content Wrapper --}}
         <div class="content-wrapper">
-            {{-- @yield('content') --}}
             <div class="p-4">
                 {{ $slot }}
             </div>
@@ -41,6 +42,9 @@
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('vendor/adminlte/dist/js/adminlte.min.js') }}"></script>
+    <!-- SweetAlert2 -->
+    {{-- <script src="{{ asset('vendor/sweetalert2/sweetalert2.all.min.js') }}"></script> --}}
+    <script src="{{ asset('vendor/sweetalert2/sweetalert2.min.js') }}"></script>
     <!-- JS Script -->
     @yield('js')
 </body>

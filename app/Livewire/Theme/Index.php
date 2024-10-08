@@ -3,6 +3,7 @@
 namespace App\Livewire\Theme;
 
 use App\Models\Theme;
+use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Livewire\Attributes\Url;
@@ -35,8 +36,10 @@ class Index extends Component
         $this->resetPage();
     }
 
-    public function delete(Theme $theme)
+    #[On('confirmed-delete')]
+    public function delete($themeId)
     {
+        $theme = Theme::find($themeId);
         $theme->delete();
     }
 

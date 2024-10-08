@@ -1,3 +1,7 @@
+@section('title')
+    Products
+@endsection
+
 <div class="card card-primary">
     <div class="card-header">
         <div class="d-flex justify-content-between align-items-center">

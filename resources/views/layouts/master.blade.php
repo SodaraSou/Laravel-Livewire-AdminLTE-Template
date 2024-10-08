@@ -26,7 +26,9 @@
         @include('layouts.sidebar')
         {{-- Content Wrapper --}}
         <div class="content-wrapper">
-            @yield('content')
+            <div class="p-4">
+                @yield('content')
+            </div>
         </div>
         {{-- Footer --}}
         @include('layouts.footer')

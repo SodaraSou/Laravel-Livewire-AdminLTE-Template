@@ -47,7 +47,7 @@
                         <td>
                             <div class="d-flex">
                                 <a href="{{ route('themes.edit', $theme->id) }}" class="btn btn-primary mr-2">Edit</a>
-                                <x-alert-modal :id='$theme->id'></x-alert-modal>
+                                <x-test :id='$theme->id'></x-test>
                             </div>
                         </td>
                     </tr>
@@ -67,6 +67,28 @@
             $("#themes>a").addClass("active");
             $("#themes").addClass("menu-open");
             $("#themes-index").addClass("my-active");
+        });
+        window.addEventListener("alert-delete", (event) => {
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Livewire.dispatch('confirmed-delete', {
+                        themeId: event.detail.id
+                    })
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your theme has been deleted.",
+                        icon: "success"
+                    });
+                }
+            });
         });
     </script>
 @endsection

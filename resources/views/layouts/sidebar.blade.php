@@ -66,6 +66,46 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item" id="order">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-boxes"></i>
+                        <p>
+                            Orders
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('orders') }}" class="nav-link" id="order-index">
+                                <i class="fas fa-angle-double-right nav-icon"></i>
+                                <p>Orders List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('orders.create') }}" class="nav-link" id="order-create">
+                                <i class="fas fa-angle-double-right nav-icon"></i>
+                                <p>Create Order</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" id="delivery">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-dolly"></i>
+                        <p>
+                            Deliveries
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('orders') }}" class="nav-link" id="delivery-index">
+                                <i class="fas fa-angle-double-right nav-icon"></i>
+                                <p>Deliveries List</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
